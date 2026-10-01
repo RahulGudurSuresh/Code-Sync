@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codesync"
+version = "0.1.0"
+description = "CodeSync Analyzer backend: conflict detection between engineering codes"
+requires-python = ">=3.11"
+dependencies = [
+    "pymupdf>=1.24",
+    "numpy",
+    "pydantic>=2",
+    "httpx",
+    "huggingface_hub",
+    "openpyxl",
+    "modal==1.4.3",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "python-multipart>=0.0.9",
+    # parsing models (CPU): layout, OCR, tables, formulas. The [ocr] extra
+    # is what the table and formula recognisers need (einops, ftfy,
+    # sentencepiece, tokenizers, ...); without it they fail at load time.
+    "paddleocr>=3.5",
+    "paddlex[ocr]>=3.5",
+    "paddlepaddle>=3.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+codesync = "codesync.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["codesync*"]

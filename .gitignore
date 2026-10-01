@@ -1,0 +1,19 @@
+# generated / downloaded, never committed
+.venv/
+__pycache__/
+*.egg-info/
+data/
+tools/llama/
+frontend/node_modules/
+frontend/dist/
+.claude/
+*.log
+
+# The codes themselves are not in the repository: ASME and PIP standards are
+# copyrighted and the BP documents are a client's internal specifications.
+# README.md lists where the public study copies come from; put the PDFs in
+# codes/ locally. data/ (parsed text, images, vectors) is derived from them
+# and is left out for the same reason.
+codes/**/*.pdf
+codes/text/
+codes/samples/

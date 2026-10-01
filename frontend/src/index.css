@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Markdown report rendering */
+.report h1 { font-size: 1.5rem; font-weight: 700; margin: 1.25rem 0 0.75rem; }
+.report h2 { font-size: 1.15rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+.report p, .report li { font-size: 0.9rem; line-height: 1.5; }
+.report ul { padding-left: 1.25rem; list-style: disc; }
+.report table { border-collapse: collapse; font-size: 0.8rem; margin: 0.5rem 0 1rem; width: 100%; }
+.report th, .report td { border: 1px solid #e2e8f0; padding: 0.35rem 0.5rem; vertical-align: top; text-align: left; }
+.report th { background: #f1f5f9; }
+.report em { color: #475569; }
